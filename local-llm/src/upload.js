@@ -10,7 +10,6 @@ const FileUpload = () => {
 
   return (
     <div>
-      <h2>File Upload Example</h2>
       <input type="file" onChange={handleFileChange} />
       {selectedFile && (
         <div>
