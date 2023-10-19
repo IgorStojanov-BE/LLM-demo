@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+// src/Chat.js
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { Button, FormControl, InputGroup } from 'react-bootstrap';
-import { ScrollToBottom } from 'react-scroll-to-bottom';
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
+  const messagesEndRef = useRef(null);
+
+  useEffect(() => {
+    messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
 
   const sendMessage = async () => {
     if (input) {
@@ -29,13 +34,14 @@ const Chat = () => {
 
   return (
     <div className="chat-container">
-      <ScrollToBottom className="chat-messages">
+      <div className="chat-messages">
         {messages.map((message, index) => (
           <div key={index} className={`message ${message.role}`}>
             {message.text}
           </div>
         ))}
-      </ScrollToBottom>
+        <div ref={messagesEndRef} />
+      </div>
       <InputGroup className="chat-input">
         <FormControl
           value={input}
