@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Chat from './chat';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
           Learn React
         </a>
       </header>
+      <h1>Chat App with GPT-3 Integration</h1>
+      <Chat />
     </div>
   );
 }
