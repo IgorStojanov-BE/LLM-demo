@@ -6,21 +6,22 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+        <h1>The Oracle</h1>
+          <Chat />
+          {/* Edit <code>src/App.js</code> and save to reload. */}
         </p>
-        <a
+        {/* <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> */}
       </header>
-      <h1>Chat App with GPT-3 Integration</h1>
-      <Chat />
+      
     </div>
   );
 }
