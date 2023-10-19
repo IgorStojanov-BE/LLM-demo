@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Chat from './chat';
+import FileUpload from './upload';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
         <h1>The Oracle</h1>
+          <FileUpload />
           <Chat />
           {/* Edit <code>src/App.js</code> and save to reload. */}
         </p>
